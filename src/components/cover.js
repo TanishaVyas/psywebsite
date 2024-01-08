@@ -6,7 +6,8 @@ const Cover = () => {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: '#e6e6fa', 
+    backgroundColor: '#e6e6fa',
+    
   };
   const imageStyle = {
     maxWidth: '100%',
