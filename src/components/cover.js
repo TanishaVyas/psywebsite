@@ -6,31 +6,24 @@ const Cover = () => {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: '#e6e6fa',
-    padding: '20px',
-    maxWidth: '1200px',
-    margin: '0 auto',
+    backgroundColor: '#e6e6fa', 
   };
-
   const imageStyle = {
     maxWidth: '100%',
-    height: 'auto',
-    marginLeft: '-150px',
-    marginRight: '-150px',
+    height: 'auto', 
+    marginLeft: '-150px', 
   };
 
   const physioMizeStyle = {
-    fontSize: '4em',
+    fontSize: '4em', 
     fontFamily: 'Arial, sans-serif',
     marginLeft: '100px',
   };
-
   const textStyle = {
-    fontSize: '1em',
+    fontSize: 'em', 
     fontFamily: 'Arial, sans-serif',
     marginLeft: '100px',
-    color: 'grey',
-    textAlign: 'center',
+    color: 'grey'
   };
 
   return (
