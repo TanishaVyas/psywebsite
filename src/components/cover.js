@@ -6,23 +6,34 @@ const Cover = () => {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    /* Add any additional styling for the container */
+    backgroundColor: '#e6e6fa', // Light purple color
   };
-
   const imageStyle = {
     maxWidth: '100%', /* Adjust the image width as needed */
-    height: 'auto', /* Maintain aspect ratio */
-    /* You can add additional styles here */
+    height: 'auto', 
+    marginLeft: '-100px', 
+  };
+
+  const physioMizeStyle = {
+    fontSize: '4em', 
+    fontFamily: 'Arial, sans-serif',
+    marginLeft: '100px',
+  };
+  const textStyle = {
+    fontSize: 'em', 
+    fontFamily: 'Arial, sans-serif',
+    marginLeft: '100px',
+    color: 'grey'
   };
 
   return (
     <div style={containerStyle}>
       <div className="text-content">
-        <h1>PHYSIO-MIZE</h1>
-        <p>Optimizing Your Movement, Maximizing Your Life!</p>
+        <h1 style={physioMizeStyle}>PHYSIO-MIZE</h1>
+        <p style={textStyle}>Optimizing Your Movement, Maximizing Your Life!</p>
       </div>
-      <div className="image-content">
-        <img src={physioImage} alt="Physiotherapy Image" style={imageStyle} />
+      <div className="image-content" style={imageStyle}>
+        <img src={physioImage} alt="Physiotherapy Image" />
       </div>
     </div>
   );
