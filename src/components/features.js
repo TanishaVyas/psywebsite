@@ -1,61 +1,77 @@
-import React, { useState } from 'react';
-import angle from '..//image//angle.png';
-import cost from '..//image//cost.png';
-import time from '..//image//time.png';
-import pain from '..//image//pain.png';
+import React, { useState } from "react";
+import angle from "..//image//angle.png";
+import cost from "..//image//cost.png";
+import time from "..//image//time.png";
+import pain from "..//image//pain.png";
 
 const styles = {
   imageContainer: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(4, 1fr)', // 4 columns in the grid
-    gap: '20px', // Gap between grid items
-    justifyContent: 'center', // Center content horizontally
-    marginLeft: '50px', // Add left margin as needed
-    marginTop: '2em', // Add 2 lines of margin at the top
+    width: "100%",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+    gap: "20px",
+    justifyContent: "space-evenly",
+    margin: "2em auto", // Centered horizontally with auto margin
+    padding: "0 20px", // Add padding for better spacing
   },
   textBox: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center', // Center content vertically
-    textAlign: 'center', // Center text
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    textAlign: "center",
+    margin: "10px", // Add margin between items
   },
   text: {
-    margin: '5px 0',
-    fontWeight: 'bold',
+    margin: "5px 0",
+    fontWeight: "bold",
   },
   subtext: {
-    fontStyle: 'italic',
-    color: '#888',
+    fontStyle: "italic",
+    color: "#888",
   },
   icon: {
-    width: '150px',
-    height: '150px',
+    width: "150px",
+    height: "150px",
   },
 };
 
+const IconItem = ({ icon, name, subtext }) => (
+  <div style={styles.textBox}>
+    <img src={icon} alt={name} style={styles.icon} />
+    <p style={styles.text}>{name}</p>
+    <p style={styles.subtext}>{subtext}</p>
+  </div>
+);
+
 const ImageList = () => {
-  const [iconNames] = useState([
-    'Precise Joint Angle Measurement',
-    'Cost Efficient',
-    'Time Saving',
-    'Pain Localization and Intensity',
+  const [iconData] = useState([
+    {
+      name: "Precise Joint Angle Measurement",
+      subtext: "Accurate angle measurement with no human error",
+      icon: angle,
+    },
+    {
+      name: "Cost Efficient",
+      subtext: "The device is economical and requires little to no maintenance",
+      icon: cost,
+    },
+    {
+      name: "Time Saving",
+      subtext:
+        "Saves travel time for the patients and helpful for those who are unable to travel",
+      icon: time,
+    },
+    {
+      name: "Pain Localization and Intensity",
+      subtext: "Localizes pain and its intensity for further assessment",
+      icon: pain,
+    },
   ]);
-  const [subTexts] = useState([
-    'Accurate angle measurement with no human error',
-    'The device is economical and requires little to no maintenance',
-    'Saves travel time for the patients and helpful for those who are unable to travel',
-    'Localizes pain and its intensity for further assessment',
-  ]);
-  const icons = [angle, cost, time, pain];
 
   return (
     <div style={styles.imageContainer}>
-      {icons.map((icon, index) => (
-        <div key={index} style={styles.textBox}>
-          <img src={icon} alt={iconNames[index]} style={styles.icon} />
-          <p style={styles.text}>{iconNames[index]}</p>
-          <p style={styles.subtext}>{subTexts[index]}</p>
-        </div>
+      {iconData.map((item, index) => (
+        <IconItem key={index} {...item} />
       ))}
     </div>
   );

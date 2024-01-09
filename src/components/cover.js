@@ -13,12 +13,20 @@ const Cover = () => {
     margin: 0,
     padding: 0,
   };
-  const imageStyle = {
-    maxWidth: "100%",
-    height: "auto",
-    marginLeft: "auto",
+  const imageContentStyle = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%", // Make the width 100% of the container
+    height: "100%", // Make the height 100% of the container
   };
 
+  const imageStyle = {
+    maxWidth: "100%",
+    maxHeight: "100%", // Make the image take 100% of the container's height
+    height: "auto",
+    width: "auto", // Maintain the aspect ratio
+  };
   const physioMizeStyle = {
     fontSize: "4em",
     fontFamily: "Arial, sans-serif",
@@ -38,12 +46,10 @@ const Cover = () => {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{}}>
       <div style={containerStyle}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
-            {" "}
-            {/* Updated Grid item */}
             <div className="text-content">
               <h1 style={physioMizeStyle}>PHYSIO-MIZE</h1>
               <p style={textStyle}>
@@ -51,11 +57,18 @@ const Cover = () => {
               </p>
             </div>
           </Grid>
-          <Grid item xs={12} md={6}>
-            {" "}
-            {/* Updated Grid item */}
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={imageContentStyle} // Apply the image content style
+          >
             <div className="image-content" style={imageStyle}>
-              <img src={physioImage} alt="Physiotherapy Image" />
+              <img
+                src={physioImage}
+                alt="Physiotherapy Image"
+                style={imageStyle}
+              />
             </div>
           </Grid>
         </Grid>
