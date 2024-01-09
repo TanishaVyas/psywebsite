@@ -7,19 +7,22 @@ import pain from "..//image//pain.png";
 const styles = {
   imageContainer: {
     width: "100%",
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+    display: "flex",
+    flexWrap: "wrap",
     gap: "20px",
     justifyContent: "space-evenly",
-    margin: "2em auto", // Centered horizontally with auto margin
-    padding: "0 20px", // Add padding for better spacing
+    margin: "2em auto",
+    padding: "0",
   },
   textBox: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     textAlign: "center",
-    margin: "10px", // Add margin between items
+    margin: "10px",
+    width: "160px",
+    height: "160px",
+    paddingBottom: "100px",
   },
   text: {
     margin: "5px 0",
@@ -28,6 +31,7 @@ const styles = {
   subtext: {
     fontStyle: "italic",
     color: "#888",
+    paddingBottom: "50px",
   },
   icon: {
     width: "150px",
