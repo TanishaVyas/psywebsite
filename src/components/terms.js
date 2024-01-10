@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Modal, Box, Typography, Button } from "@mui/material";
+import React, { useState } from 'react';
+import { Modal, Box, Typography, Button } from '@mui/material';
 
 function TermsAndConditionsModal() {
   const [open, setOpen] = useState(false);
@@ -18,7 +18,7 @@ function TermsAndConditionsModal() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'flex-start', // Align items to the top
-        height: '2vh',
+        height: '5vh',
         margin: 0,
         padding: 0,
       }}
@@ -40,26 +40,25 @@ function TermsAndConditionsModal() {
       >
         <Box
           sx={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: "90%", // Set maximum width
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: '90%', // Set maximum width
             maxWidth: 600, // Limit maximum width
-            bgcolor: "background.paper",
+            bgcolor: 'background.paper',
             boxShadow: 24,
             p: 4,
-            "@media (max-width: 600px)": {
-              width: "95%", // Adjust width for smaller screens
+            '@media (max-width: 600px)': {
+              width: '95%', // Adjust width for smaller screens
             },
           }}
         >
-          <Typography variant="h6" component="h2" gutterBottom>
+          <Typography id="modal-title" variant="h6" component="h2">
             Terms and Conditions
           </Typography>
-<<<<<<< Updated upstream
-          <Box sx={{ mt: 2 }}>
-            <Typography paragraph>
+          <Typography id="modal-description" sx={{ mt: 2 }}>
+          <Typography paragraph>
               The following terms and conditions govern your use of the
               physiotherapy and rehabilitation device ("Physio-mize"). By using
               the Device, you agree to these terms and conditions.
@@ -96,16 +95,8 @@ function TermsAndConditionsModal() {
               Device. If you do not agree with any of these terms, do not use
               the Device.
             </Typography>
-          </Box>
-          <Button onClick={handleClose} sx={{ mt: 2 }}>
-            Close
-          </Button>
-=======
-          <Typography id="modal-description" sx={{ mt: 2 }}>
-            {/* Your terms and conditions content */}
           </Typography>
           <Button onClick={handleClose}>Close</Button>
->>>>>>> Stashed changes
         </Box>
       </Modal>
     </Box>
