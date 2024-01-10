@@ -1,4 +1,5 @@
 import "./App.css";
+import Navbar from "./components/navbar";
 import Cover from "./components/cover";
 import Features from "./components/features";
 import VideoLinks from "./components/youtube";
@@ -12,6 +13,7 @@ import Clip from "./components/clip";
 function App() {
   return (
     <div>
+      <Navbar />
       <Cover></Cover>
       <Features></Features>
       <VideoLinks />
