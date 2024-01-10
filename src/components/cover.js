@@ -2,6 +2,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import physioImage from "../components/image-removebg-preview (90).png";
+import logo from "..//image//logo.png";
 
 const Cover = () => {
   const containerStyle = {
@@ -51,7 +52,25 @@ const Cover = () => {
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <div className="text-content">
-              <h1 style={physioMizeStyle}>PHYSIO-MIZE</h1>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <img
+                  src={logo}
+                  alt="Physiomize logo"
+                  style={{
+                    maxWidth: "150px", // Set the maximum width to 100 pixels
+                    maxHeight: "150px", // Set the maximum height to 100 pixels
+                    height: "auto",
+                    width: "auto",
+                  }}
+                />
+                <h1 style={physioMizeStyle}>PHYSIO-MIZE</h1>
+              </div>
               <p style={textStyle}>
                 Optimizing Your Movement, Maximizing Your Life!
               </p>
