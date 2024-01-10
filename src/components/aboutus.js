@@ -4,8 +4,7 @@ import { Container, Typography, Paper, Grid } from "@mui/material";
 const containerStyle = {
   backgroundColor: "#FCFAF5",
   borderRadius: "15px",
-  padding: "50px",
-  margin: "50px",
+  padding: "10px",
 };
 
 const sectionTitleStyle = {

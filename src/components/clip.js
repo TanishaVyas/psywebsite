@@ -1,16 +1,10 @@
+import React from "react";
 import vid from "../image/clip.gif";
 import vid1 from "../image/clip1.gif";
 import vid2 from "../image/clip2.gif";
+import { Grid, Typography } from "@mui/material";
 
 function Clip() {
-  const containerStyle = {
-    height: "100vh",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-around", // Adjust as needed
-    alignItems: "center",
-  };
-
   const gifContainerStyle = {
     marginBottom: "20px", // Adjust the padding between GIFs
     textAlign: "center",
@@ -18,24 +12,38 @@ function Clip() {
 
   const gifStyle = {
     width: "auto",
-    height: "80vh",
+    height: "60vh",
   };
 
   return (
-    <div style={containerStyle}>
-      <div style={gifContainerStyle}>
+    <Grid
+      container
+      spacing={2}
+      justifyContent="space-around"
+      alignItems="center"
+    >
+      {/* Video 1 */}
+      <Grid item xs={12} sm={6} md={4} style={gifContainerStyle}>
         <img src={vid} alt="GIF Clip" style={gifStyle} />
-        <p>3D visualisation of movement</p>
-      </div>
-      <div style={gifContainerStyle}>
+        <Typography variant="body2">3D visualisation of movement</Typography>
+      </Grid>
+
+      {/* Video 2 */}
+      <Grid item xs={12} sm={6} md={4} style={gifContainerStyle}>
         <img src={vid1} alt="GIF Clip" style={gifStyle} />
-        <p>360 rotating 3d model of the joint</p>
-      </div>
-      <div style={gifContainerStyle}>
+        <Typography variant="body2">
+          360 rotating 3d model of the joint
+        </Typography>
+      </Grid>
+
+      {/* Video 3 */}
+      <Grid item xs={12} sm={6} md={4} style={gifContainerStyle}>
         <img src={vid2} alt="GIF Clip" style={gifStyle} />
-        <p>Pain button which can mark the intensity of pain</p>
-      </div>
-    </div>
+        <Typography variant="body2">
+          Pain button which can mark the intensity of pain
+        </Typography>
+      </Grid>
+    </Grid>
   );
 }
 
