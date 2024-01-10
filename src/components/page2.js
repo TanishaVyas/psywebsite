@@ -16,8 +16,7 @@ class PhysioMizeComponent extends React.Component {
           flexDirection: 'row',
           justifyContent: 'flex-start',
           alignItems: 'flex-start',
-          width: '100%',
-          maxWidth: '1200px', // Adjust the maximum width based on your design requirements
+          maxWidth: '1200px', // Maximum width of the content wrapper
           margin: '0 auto', // Center the content horizontally
           height: '300px', // Height of the content box
           marginBottom: '20px',
@@ -31,7 +30,7 @@ class PhysioMizeComponent extends React.Component {
             backgroundColor: '#fff9c4',
             borderRadius: '10px',
             padding: '5%',
-            width: '60%', // Adjusted width for the content
+            flex: '1', // Allow the content to occupy remaining space
             height: '100%', // Height to occupy the entire content wrapper height
             boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
             boxSizing: 'border-box',
