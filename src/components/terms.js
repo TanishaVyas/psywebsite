@@ -23,7 +23,7 @@ function TermsAndConditionsModal() {
         padding: 0,
       }}
     >
-      <Box sx={{ marginTop: 'auto' }}> {/* Use a Box with margin-top: auto */}
+      <Box sx={{ marginTop: 'auto' }}>
         <Button
           variant="outlined"
           onClick={handleOpen}
@@ -46,9 +46,11 @@ function TermsAndConditionsModal() {
             transform: 'translate(-50%, -50%)',
             width: '90%', // Set maximum width
             maxWidth: 600, // Limit maximum width
+            maxHeight: '80vh', // Limit maximum height
             bgcolor: 'background.paper',
             boxShadow: 24,
             p: 4,
+            overflowY: 'auto', // Enable vertical scroll when needed
             '@media (max-width: 600px)': {
               width: '95%', // Adjust width for smaller screens
             },
