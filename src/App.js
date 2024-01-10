@@ -7,6 +7,8 @@ import Aboutproj from "./components/pg1";
 import Pg2 from "./components/page2";
 import Pg3 from "./components/page3";
 import Terms from "./components/terms";
+import Clip from "./components/clip";
+
 function App() {
   return (
     <div>
@@ -16,6 +18,7 @@ function App() {
       <Aboutproj />
       <Pg2 />
       <Pg3 />
+      <Clip />
       <ContactUS />
       <Terms />
     </div>
