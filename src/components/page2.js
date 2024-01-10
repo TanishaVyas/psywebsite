@@ -1,5 +1,5 @@
 import React from 'react';
-import pic from '..//image//pic2.png';
+import pic from '..//image//hands.png';
 
 class PhysioMizeComponent extends React.Component {
   render() {
@@ -35,7 +35,7 @@ class PhysioMizeComponent extends React.Component {
             height: '100%', // Height to occupy the entire content wrapper height
             boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
             boxSizing: 'border-box',
-            overflow: 'hidden', // Hide any overflowing content
+            overflowY: 'auto', // Add scrollbar when content overflows vertically
           }}>
             {/* Heading */}
             <h1 style={{

@@ -31,7 +31,7 @@ class PhysioMizeComponent extends React.Component {
             height: '100%', // Set the height to occupy the entire content wrapper height
             boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
             boxSizing: 'border-box',
-            // Hide any overflowing content
+            overflowY: 'auto', // Add scrollbar when content overflows vertically
           }}>
             {/* Heading */}
             <h1 style={{
@@ -43,6 +43,7 @@ class PhysioMizeComponent extends React.Component {
             {/* Paragraphs */}
             <p style={{ fontSize: '16px', marginBottom: 0 }}>
               With high-precision sensors and an intuitive app interface, we enable patients to actively participate in their recovery. Real-time data transmission and pain localization features empower physiotherapists to craft personalized treatment plans. 
+              {/* Add more content here if needed */}
             </p>
           </div>
 
