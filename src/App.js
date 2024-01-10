@@ -13,11 +13,11 @@ function App() {
       <Cover></Cover>
       <Features></Features>
       <VideoLinks />
-      
-      <Aboutproj/>
-      <Pg2/>
-      <Pg3/>
-      <Terms/>
+      <Aboutproj />
+      <Pg2 />
+      <Pg3 />
+      <ContactUS />
+      <Terms />
     </div>
   );
 }

@@ -11,6 +11,7 @@ const VideoLinks = () => {
 
   const wrapperStyle = {
     display: "flex",
+    backgroundColor: "#F7F5FD",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
@@ -47,6 +48,18 @@ const VideoLinks = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
+        <div>
+          <p style={{ fontSize: "20px", width: "600px", marginLeft: "20px" }}>
+            <b>
+              This video is about a project called Physio-Mize, which aims to
+              bridge the gap between physiotherapists and remote patients.
+              Traditional physiotherapy is an interactive and repetitive
+              process, but it can be inconvenient and expensive for patients.
+              Physio-Mize is a device that can be attached to any joint and
+              helps measure the patient's range of motion.
+            </b>
+          </p>
+        </div>
       </div>
     </div>
   );
