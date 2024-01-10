@@ -6,6 +6,7 @@ import ContactUS from "./components/aboutus";
 import Aboutproj from "./components/pg1";
 import Pg2 from "./components/page2";
 import Pg3 from "./components/page3";
+import Terms from "./components/tandc";
 function App() {
   return (
     <div>
@@ -16,6 +17,7 @@ function App() {
       <Aboutproj/>
       <Pg2/>
       <Pg3/>
+      <Terms/>
     </div>
   );
 }
