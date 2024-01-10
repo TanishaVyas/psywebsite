@@ -1,7 +1,4 @@
 import React from "react";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import EmailIcon from "@mui/icons-material/Email";
-import PhoneIcon from "@mui/icons-material/Phone";
 
 const pageTitleStyle = {
   textAlign: "left",
@@ -29,18 +26,36 @@ const iconContainerStyle = {
 
 function ContactUS() {
   return (
-    <div>
+    <div style={{ backgroundColor: "#FCFAF5", minHeight: "100vh" }}>
       <div style={pageTitleStyle}>About Us</div>
-      <div style={{ ...pageTitleStyle, fontSize: "30px" }}>
-        <p>gyuhiolkjtyuikmnjgyujikmbghjmnvbn</p>
+      <div style={{ ...pageTitleStyle, fontSize: "20px" }}>
+        <p>We are second year students at</p>
       </div>
       <div style={contactContainerStyle}>
-        <div>Contact</div>
+        <div style={pageTitleStyle}>Contact</div>
         <div style={{ display: "flex" }}>
           <div style={iconContainerStyle}>
-            <div style={{ marginLeft: "5px", fontSize: "15px" }}>Email</div>
+            <div style={{ marginLeft: "5px", fontSize: "15px" }}>
+              <b>Email</b>
+            </div>
             <span style={{ marginLeft: "5px", fontSize: "15px" }}>
               yash.parkhi.btech2022@sitpune.edu.in
+            </span>
+          </div>
+          <div style={iconContainerStyle}>
+            <div style={{ marginLeft: "5px", fontSize: "15px" }}>
+              <b>Phone</b>
+            </div>
+            <span style={{ marginLeft: "5px", fontSize: "15px" }}>
+              +91 1234567890
+            </span>
+          </div>
+          <div style={iconContainerStyle}>
+            <div style={{ marginLeft: "5px", fontSize: "15px" }}>
+              <b>Linkden</b>
+            </div>
+            <span style={{ marginLeft: "5px", fontSize: "15px" }}>
+              1234567890
             </span>
           </div>
         </div>
