@@ -13,10 +13,25 @@ function TermsAndConditionsModal() {
   };
 
   return (
-    <>
-      <Button variant="outlined" onClick={handleOpen}>
-        Open Terms and Conditions
-      </Button>
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'flex-start', // Align items to the top
+        height: '2vh',
+        margin: 0,
+        padding: 0,
+      }}
+    >
+      <Box sx={{ marginTop: 'auto' }}> {/* Use a Box with margin-top: auto */}
+        <Button
+          variant="outlined"
+          onClick={handleOpen}
+          sx={{ p: '8px 16px', m: 0 }}
+        >
+          Open Terms and Conditions
+        </Button>
+      </Box>
       <Modal
         open={open}
         onClose={handleClose}
@@ -42,6 +57,7 @@ function TermsAndConditionsModal() {
           <Typography variant="h6" component="h2" gutterBottom>
             Terms and Conditions
           </Typography>
+<<<<<<< Updated upstream
           <Box sx={{ mt: 2 }}>
             <Typography paragraph>
               The following terms and conditions govern your use of the
@@ -84,9 +100,15 @@ function TermsAndConditionsModal() {
           <Button onClick={handleClose} sx={{ mt: 2 }}>
             Close
           </Button>
+=======
+          <Typography id="modal-description" sx={{ mt: 2 }}>
+            {/* Your terms and conditions content */}
+          </Typography>
+          <Button onClick={handleClose}>Close</Button>
+>>>>>>> Stashed changes
         </Box>
       </Modal>
-    </>
+    </Box>
   );
 }
 
