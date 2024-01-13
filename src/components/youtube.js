@@ -9,21 +9,27 @@ const VideoLinks = () => {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    padding: "20px 5px", // Adjusted padding
+    padding: "20px 15px", // Adjusted padding
   };
 
   const pageTitleStyle = {
     color: "#2468ec",
     textAlign: "center",
-    fontSize: "28px", // Decreased font size
+    fontSize: window.innerWidth < 600 ? "5vw" : "3vw", // Decreased font size
     margin: "0", // Removed margin for spacing
   };
 
   const videoContainerStyle = {
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    gap: "9px",
-    marginTop: "10px", // Adjusted top margin for spacing
+    display: "flex", // Updated to flex for horizontal layout
+    marginTop: "15px", // Adjusted top margin for spacing
+    marginBottom: window.innerWidth < 600 ? "25px" : "40px", // Adjusted bottom margin for spacing
+    padding: "0px", // Added padding
+  };
+
+  const videoStyle = {
+    width: "50%", // Set width to 50% for the video container
+    marginRight:  window.innerWidth < 600 ? "10px" : "6vw",
+    marginLeft:  window.innerWidth < 600 ? "10px" : "6vw", // Added right margin for spacing
   };
 
   const iframeStyle = {
@@ -32,19 +38,20 @@ const VideoLinks = () => {
   };
 
   const videoInfoStyle = {
-    fontSize: "16px", // Decreased font size
-    width: "100%", // Adjusted for responsiveness
-    marginTop: "0px",
-    overflowY: "auto", // Added to enable vertical scrolling
+    flex: 1, // Let the info container take the remaining width
+    fontSize: window.innerWidth < 600 ? "3vw" : "1.2vw" ,
+       marginLeft: "10px", // Added left margin for spacing
     maxHeight: "300px", // Max height for text box
     lineHeight: "1.4", // Adjusted line height
+    padding: "0px", // Added padding
+    overflowY: "hidden", // Hide overflow and prevent scrolling
   };
 
   return (
     <div id="demo" style={wrapperStyle}>
       <h2 style={pageTitleStyle}>DEMO VIDEO</h2>
       <div style={videoContainerStyle}>
-        <div style={{ width: "100%" }}>
+        <div style={videoStyle}>
           <iframe
             style={iframeStyle}
             src={youtubeVideoLink1.replace(
@@ -57,7 +64,7 @@ const VideoLinks = () => {
             allowFullScreen
           ></iframe>
         </div>
-        <div style={{ ...videoInfoStyle, maxHeight: "300px" }}>
+        <div style={videoInfoStyle}>
           <p>
             This video is about a project called Physio-Mize, which aims to
             bridge the gap between physiotherapists and remote patients.

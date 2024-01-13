@@ -8,11 +8,13 @@ function Clip() {
   const gifContainerStyle = {
     marginBottom: "20px", // Adjust the padding between GIFs
     textAlign: "center",
+    marginTop: "20px"
   };
 
   const gifStyle = {
     width: "auto",
-    height: "60vh",
+     height: window.innerWidth < 600 ? "40vh" : "60vh",
+
   };
 
   return (
@@ -32,7 +34,7 @@ function Clip() {
       <Grid item xs={12} sm={6} md={4} style={gifContainerStyle}>
         <img src={vid1} alt="GIF Clip" style={gifStyle} />
         <Typography variant="body2">
-          360 rotating 3d model of the joint
+          360 degree rotating model of the joint
         </Typography>
       </Grid>
 
