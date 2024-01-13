@@ -6,7 +6,7 @@ function Navbar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
         position="sticky"
-        elevation={0}
+        elevation={1}
         sx={{ backgroundColor: "#e6e6fa" }}
       >
         <Toolbar>
