@@ -10,7 +10,7 @@ const Cover = () => {
     justifyContent: "space-between",
     alignItems: "center",
     backgroundColor: "#e6e6fa",
-    height: "100vh",
+    height: "75vh",
     margin: 0,
     padding: 0,
   };
@@ -29,13 +29,14 @@ const Cover = () => {
     width: "auto", // Maintain the aspect ratio
   };
   const physioMizeStyle = {
-    fontSize: "4em",
-    fontFamily: "Arial, sans-serif",
+    fontSize: window.innerWidth < 600 ? "15vw" : "6vw",
+    fontFamily: "Arial, sans-serif", // Change the font family
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
     height: "100%",
+    padding: "0px",
   };
   const textStyle = {
     fontSize: "1em",
@@ -52,24 +53,9 @@ const Cover = () => {
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <div className="text-content">
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
-              >
-                <img
-                  src={logo}
-                  alt="Physiomize logo"
-                  style={{
-                     // Set the maximum height to 50% of the viewport width
-                    height: window.innerWidth < 600 ? "50vw" : "20vw",
-
-                    width: "auto",
-                  }}
-                />
-              </div>
+              <p style={physioMizeStyle}>
+                Physio-mize
+              </p>
               <p style={textStyle}>
                 Optimizing Your Movement, Maximizing Your Life!
               </p>
