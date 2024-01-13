@@ -1,5 +1,6 @@
 import React from "react";
 import { AppBar, Box, Toolbar, Stack, Button } from "@mui/material";
+import logo from "..//image//logo.png";
 
 function Navbar() {
   return (
@@ -10,6 +11,11 @@ function Navbar() {
         sx={{ backgroundColor: "#e6e6fa" }}
       >
         <Toolbar>
+          <img
+            src={logo}
+            alt="Logo"
+            style={{ height: "80px", marginRight: "10px" }}
+          />
           <Stack
             direction="row"
             spacing={2}
