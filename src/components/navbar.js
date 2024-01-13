@@ -16,9 +16,18 @@ function Navbar() {
             justifyContent="flex-end"
             flexGrow={1}
           >
-            <Button sx={{ color: "black" }}>HOME</Button>
-            <Button sx={{ color: "black" }}>DEVICE</Button>
-            <Button sx={{ color: "black" }}>CONTACTS</Button>
+            <Button href="#home" sx={{ color: "black" }}>
+              HOME
+            </Button>
+            <Button href="#device" sx={{ color: "black" }}>
+              DEVICE
+            </Button>
+            <Button href="#demo" sx={{ color: "black" }}>
+              DEMO
+            </Button>
+            <Button href="#contact" sx={{ color: "black" }}>
+              CONTACTS
+            </Button>
           </Stack>
         </Toolbar>
       </AppBar>

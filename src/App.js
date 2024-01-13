@@ -16,10 +16,10 @@ function App() {
       <Navbar />
       <Cover></Cover>
       <Features></Features>
-      <VideoLinks />
       <Aboutproj />
       <Pg2 />
       <Pg3 />
+      <VideoLinks />
       <Clip />
       <ContactUS />
       <Terms />

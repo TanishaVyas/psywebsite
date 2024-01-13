@@ -34,7 +34,7 @@ const iconStyle = {
 
 function ContactUS() {
   return (
-    <Container style={containerStyle}>
+    <Container style={containerStyle} id="contact">
       <div>
         <Typography variant="h4" style={sectionTitleStyle}>
           About us:
