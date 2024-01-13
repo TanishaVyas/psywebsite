@@ -1,4 +1,5 @@
 import "./App.css";
+import Test from "./components/test";
 import Navbar from "./components/navbar";
 import Cover from "./components/cover";
 import Features from "./components/features";
@@ -13,6 +14,7 @@ import Clip from "./components/clip";
 function App() {
   return (
     <div>
+      
       <Navbar />
       <Cover></Cover>
       <Features></Features>
