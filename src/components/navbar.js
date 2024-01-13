@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Box, Toolbar, Stack, Button } from "@mui/material";
+import { AppBar, Box, Toolbar, Button, Typography } from "@mui/material";
 import logo from "..//image//logo.png";
 
 function Navbar() {
@@ -16,25 +16,39 @@ function Navbar() {
             alt="Logo"
             style={{ height: "80px", marginRight: "10px" }}
           />
-          <Stack
-            direction="row"
-            spacing={2}
-            justifyContent="flex-end"
-            flexGrow={1}
-          >
-            <Button href="#home" sx={{ color: "black" }}>
+          <Box sx={{ flexGrow: 1 }} />
+          <Button href="#home">
+            <Typography
+              variant="h6"
+              sx={{ fontSize: { xs: "16px", md: "20px" }, color: "black" }}
+            >
               HOME
-            </Button>
-            <Button href="#device" sx={{ color: "black" }}>
+            </Typography>
+          </Button>
+          <Button href="#device">
+            <Typography
+              variant="h6"
+              sx={{ fontSize: { xs: "16px", md: "20px" }, color: "black" }}
+            >
               DEVICE
-            </Button>
-            <Button href="#demo" sx={{ color: "black" }}>
+            </Typography>
+          </Button>
+          <Button href="#demo">
+            <Typography
+              variant="h6"
+              sx={{ fontSize: { xs: "16px", md: "20px" }, color: "black" }}
+            >
               DEMO
-            </Button>
-            <Button href="#contact" sx={{ color: "black" }}>
+            </Typography>
+          </Button>
+          <Button href="#contact">
+            <Typography
+              variant="h6"
+              sx={{ fontSize: { xs: "16px", md: "20px" }, color: "black" }}
+            >
               CONTACTS
-            </Button>
-          </Stack>
+            </Typography>
+          </Button>
         </Toolbar>
       </AppBar>
     </Box>

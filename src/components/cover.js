@@ -10,7 +10,7 @@ const Cover = () => {
     justifyContent: "space-between",
     alignItems: "center",
     backgroundColor: "#e6e6fa",
-    height: "75vh",
+    height: "100vh",
     margin: 0,
     padding: 0,
   };
@@ -29,8 +29,8 @@ const Cover = () => {
     width: "auto", // Maintain the aspect ratio
   };
   const physioMizeStyle = {
-    fontSize: window.innerWidth < 600 ? "15vw" : "6vw",
-    fontFamily: "Arial, sans-serif", // Change the font family
+    fontSize: window.innerWidth < 600 ? "13vw" : "6vw",
+    fontFamily: "sans-serif", // Change the font family
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -40,7 +40,7 @@ const Cover = () => {
   };
   const textStyle = {
     fontSize: "1em",
-    fontFamily: "Arial, sans-serif",
+    fontFamily: "sans-serif",
     color: "grey",
     display: "flex",
     alignItems: "center",
@@ -54,7 +54,7 @@ const Cover = () => {
           <Grid item xs={12} md={6}>
             <div className="text-content">
               <p style={physioMizeStyle}>
-                Physio-mize
+                <b>PHYSIO-MIZE</b>
               </p>
               <p style={textStyle}>
                 Optimizing Your Movement, Maximizing Your Life!
