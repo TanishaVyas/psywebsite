@@ -63,13 +63,12 @@ const Cover = () => {
                   src={logo}
                   alt="Physiomize logo"
                   style={{
-                    maxWidth: "150px", // Set the maximum width to 100 pixels
-                    maxHeight: "150px", // Set the maximum height to 100 pixels
-                    height: "auto",
+                     // Set the maximum height to 50% of the viewport width
+                    height: window.innerWidth < 600 ? "50vw" : "20vw",
+
                     width: "auto",
                   }}
                 />
-                <h1 style={physioMizeStyle}>PHYSIO-MIZE</h1>
               </div>
               <p style={textStyle}>
                 Optimizing Your Movement, Maximizing Your Life!
