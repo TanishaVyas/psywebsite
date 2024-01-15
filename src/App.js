@@ -10,11 +10,11 @@ import Pg2 from "./components/page2";
 import Pg3 from "./components/page3";
 import Terms from "./components/terms";
 import Clip from "./components/clip";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   return (
     <div>
-      
       <Navbar />
       <Cover></Cover>
       <Features></Features>
@@ -25,6 +25,7 @@ function App() {
       <Clip />
       <ContactUS />
       <Terms />
+      <ScrollToTopButton />
     </div>
   );
 }

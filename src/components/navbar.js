@@ -17,20 +17,12 @@ function Navbar() {
             style={{ height: "80px", marginRight: "10px" }}
           />
           <Box sx={{ flexGrow: 1 }} />
-          <Button href="#home">
-            <Typography
-              variant="h6"
-              sx={{ fontSize: { xs: "16px", md: "20px" }, color: "black" }}
-            >
-              HOME
-            </Typography>
-          </Button>
           <Button href="#device">
             <Typography
               variant="h6"
               sx={{ fontSize: { xs: "16px", md: "20px" }, color: "black" }}
             >
-              DEVICE
+              ABOUT DEVICE
             </Typography>
           </Button>
           <Button href="#demo">
@@ -46,7 +38,7 @@ function Navbar() {
               variant="h6"
               sx={{ fontSize: { xs: "16px", md: "20px" }, color: "black" }}
             >
-              CONTACTS
+              CONTACT US
             </Typography>
           </Button>
         </Toolbar>
