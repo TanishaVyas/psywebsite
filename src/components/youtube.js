@@ -41,6 +41,8 @@ const VideoLinks = () => {
     flex: 1, // Let the info container take the remaining width
     fontSize: window.innerWidth < 600 ? "3vw" : "1.2vw" ,
        marginLeft: "10px", // Added left margin for spacing
+      marginRight: window.innerWidth < 600 ? "0px" : "2vw", // Decreased font size
+
     maxHeight: "300px", // Max height for text box
     lineHeight: "1.4", // Adjusted line height
     padding: "0px", // Added padding

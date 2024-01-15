@@ -73,7 +73,7 @@ const ImageList = () => {
   ]);
 
   return (
-    <div style={styles.imageContainer}>
+    <div id="ures" style={styles.imageContainer}>
       {iconData.map((item, index) => (
         <IconItem key={index} {...item} />
       ))}

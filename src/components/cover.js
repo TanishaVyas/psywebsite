@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import physioImage from "../components/image-removebg-preview (90).png";
-import logo from "..//image//logo.png";
 
 const Cover = () => {
+  const [fontSize, setFontSize] = useState("6vw");
+
+  useEffect(() => {
+    const handleResize = () => {
+      setFontSize(window.innerWidth < 600 ? "6vw" : "13vw");
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const containerStyle = {
     display: "flex",
     justifyContent: "space-between",
@@ -14,6 +31,7 @@ const Cover = () => {
     margin: 0,
     padding: 0,
   };
+
   const imageContentStyle = {
     display: "flex",
     justifyContent: "center",
@@ -28,9 +46,10 @@ const Cover = () => {
     height: "auto",
     width: "auto", // Maintain the aspect ratio
   };
+
   const physioMizeStyle = {
-    fontSize: window.innerWidth < 600 ? "13vw" : "6vw",
-    fontFamily: "sans-serif", // Change the font family
+    fontSize: window.innerWidth < 600 ? "13.5vw" : "5vw",
+    fontFamily: "sans-serif",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -38,6 +57,7 @@ const Cover = () => {
     height: "100%",
     padding: "0px",
   };
+
   const textStyle = {
     fontSize: "1em",
     fontFamily: "sans-serif",
@@ -47,7 +67,7 @@ const Cover = () => {
     justifyContent: "center",
   };
 
-  return (
+ return (
     <Box sx={{}} id="home">
       <div style={containerStyle}>
         <Grid container spacing={2}>
@@ -59,15 +79,28 @@ const Cover = () => {
               <p style={textStyle}>
                 Optimizing Your Movement, Maximizing Your Life!
               </p>
+              <a href="#ures" style={{ textDecoration: 'none' }}>
+  <Stack direction="row" spacing={2} sx={{ marginLeft: window.innerWidth < 600 ? "30vw" : "17vw", 
+  marginTop: window.innerWidth < 600 ? "13vw" : "5vw" }}>
+    <Button
+      variant="contained"
+      endIcon={<ArrowForwardIcon />}
+      sx={{
+        backgroundColor: "#ffffe0",
+        color: "black",
+        fontSize: "1em",
+        padding:"1vw",
+        borderRadius:"10px"
+      }}
+    >
+      Get Started
+    </Button>
+  </Stack>
+</a>
             </div>
           </Grid>
-          <Grid
-            item
-            xs={12}
-            md={6}
-            sx={imageContentStyle} // Apply the image content style
-          >
-            <div className="image-content" style={imageStyle}>
+          <Grid item xs={12} md={6}>
+            <div className="image-content" style={imageContentStyle}>
               <img
                 src={physioImage}
                 alt="Physiotherapy Image"
