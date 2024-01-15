@@ -37,7 +37,7 @@ const ScrollToTopButton = () => {
         position: "fixed",
         bottom: "20px",
         right: "20px",
-        backgroundColor: "#007bff",
+        backgroundColor: "#ffffe0",
         borderRadius: "50%",
         color: "#fff",
         border: "none",
@@ -48,7 +48,7 @@ const ScrollToTopButton = () => {
       }}
       onClick={scrollToTop}
     >
-      <ArrowUpwardIcon />
+      <ArrowUpwardIcon style={{ color: "black" }} />
     </div>
   );
 };
